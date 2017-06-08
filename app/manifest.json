@@ -1,0 +1,49 @@
+{
+
+	"manifest_version": 2,
+
+	"name": "Auto Craigslist",
+	"version": "2.0",
+	"description": "Auto Cg Ads Console",
+
+	"icons": {
+		"128": "./icons/icon128.png",
+		"48": "./icons/icon48.png",
+		"16": "./icons/icon16.png"
+	},
+
+	"background": {
+		"scripts": ["./background/background.js"],
+		"persistent": false
+	},
+
+	"browser_action": {
+		"default_icon": "./icons/icon16.png",
+		"default_title": "Auto Craigslist",
+		"default_popup": "./popup/popup.html"
+	},
+
+	"content_scripts": [
+
+		{
+			"matches": ["https://accounts.craigslist.org/login?*"],
+			"js": ["jquery-3.2.1.js","./content/content.js"]
+
+		},
+		{
+			"matches": ["https://accounts.craigslist.org/login/home?*"],
+			"css": ["readlisting.css"],
+			"js": ["jquery-3.2.1.js","./content/readlisting.js"]
+		},
+		{
+			"matches": ["https://post.craigslist.org/*/*lang=en&cc=us&s=edit",
+						"https://post.craigslist.org/*/*lang=en&cc=us&s=preview",
+						"https://post.craigslist.org/*/*lang=en&cc=us&s=redirect"],
+			"js": ["jquery-3.2.1.js","./content/repost.js"]
+		}
+	],
+
+	"permissions": [
+		"tabs"
+	]
+}
