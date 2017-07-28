@@ -1,0 +1,22 @@
+{
+  "name": "autocraigs",
+  "version": "1.0.0",
+  "description": "Auto Craigs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeterQu007/AutoCr.git"
+  },
+  "author": "Peter Qu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PeterQu007/AutoCr/issues"
+  },
+  "homepage": "https://github.com/PeterQu007/AutoCr#readme",
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}

@@ -27,20 +27,21 @@
 
 		{
 			"matches": ["https://accounts.craigslist.org/login?*"],
-			"js": ["jquery-3.2.1.js","./content/content.js"]
+			"js": ["./assets/lib/jquery/dist/jquery.min.js","./content/@content.js"]
 
 		},
 		{
 			"matches": ["https://accounts.craigslist.org/login/home?*"],
-			"css": ["readlisting.css"],
-			"js": ["jquery-3.2.1.js","./content/readlisting.js"]
+			"css": ["./content/readlisting.css"],
+			"js": ["./assets/lib/jquery/dist/jquery.min.js","./content/readlisting.js"]
 		},
 		{
 			"matches": ["https://post.craigslist.org/*/*lang=en&cc=us&s=edit",
 						"https://post.craigslist.org/*/*lang=en&cc=us&s=preview",
 						"https://post.craigslist.org/*/*lang=en&cc=us&s=redirect"],
-			"js": ["jquery-3.2.1.js","./content/repost.js"]
+			"js": ["./assets/lib/jquery/dist/jquery.min.js","./content/repost.js"]
 		}
+
 	],
 
 	"permissions": [
